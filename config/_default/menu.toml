@@ -1,15 +1,84 @@
 [[social]]
     identifier = "github"
     name       = "GitHub"
-    url        = "https://github.com/CaiJimmy/hugo-theme-stack"
+    url        = "https://github.com/fattyyo"
 
     [social.params]
         icon = "brand-github"
 
-[[social]]
-    identifier = "twitter"
-    name       = "Twitter"
-    url        = "https://twitter.com"
+# Navbar 選單
+[[navbar]]
+    identifier = "americas"
+    name       = "美洲"
+    weight     = 1
 
-    [social.params]
-        icon = "brand-twitter"
+[[navbar]]
+    identifier = "usa"
+    name       = "美國"
+    parent     = "americas"
+    url        = "/tags/美國/"
+    weight     = 1
+
+[[navbar]]
+    identifier = "europe"
+    name       = "歐洲"
+    weight     = 2
+
+[[navbar]]
+    identifier = "france"
+    name       = "法國"
+    parent     = "europe"
+    url        = "/tags/法國/"
+    weight     = 1
+
+[[navbar]]
+    identifier = "uk"
+    name       = "英國"
+    parent     = "europe"
+    url        = "/tags/英國/"
+    weight     = 2
+
+[[navbar]]
+    identifier = "iceland"
+    name       = "冰島"
+    parent     = "europe"
+    url        = "/tags/冰島/"
+    weight     = 3
+
+[[navbar]]
+    identifier = "asia"
+    name       = "亞洲"
+    weight     = 3
+
+[[navbar]]
+    identifier = "japan"
+    name       = "日本"
+    parent     = "asia"
+    url        = "/tags/日本/"
+    weight     = 1
+
+[[navbar]]
+    identifier = "korea"
+    name       = "韓國"
+    parent     = "asia"
+    url        = "/tags/韓國/"
+    weight     = 2
+
+[[navbar]]
+    identifier = "oceania"
+    name       = "大洋洲"
+    weight     = 4
+
+[[navbar]]
+    identifier = "australia"
+    name       = "澳洲"
+    parent     = "oceania"
+    url        = "/tags/澳洲/"
+    weight     = 1
+
+[[navbar]]
+    identifier = "newzealand"
+    name       = "紐西蘭"
+    parent     = "oceania"
+    url        = "/tags/紐西蘭/"
+    weight     = 2
