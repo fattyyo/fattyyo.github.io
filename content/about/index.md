@@ -1,5 +1,5 @@
 ---
-title: "About Eric"
+title: "About Me"
 layout: "page"
 ---
 
