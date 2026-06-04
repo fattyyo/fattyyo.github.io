@@ -46,6 +46,83 @@
     weight     = 3
 
 [[navbar]]
+    identifier = "italy"
+    name       = "義大利"
+    parent     = "europe"
+    url        = "/tags/義大利/"
+    weight     = 4
+
+[[navbar]]
+    identifier = "spain"
+    name       = "西班牙"
+    parent     = "europe"
+    url        = "/tags/西班牙/"
+    weight     = 5
+
+[[navbar]]
+    identifier = "netherlands"
+    name       = "荷蘭"
+    parent     = "europe"
+    url        = "/tags/荷蘭/"
+    weight     = 6
+
+[[navbar]]
+    identifier = "belgium"
+    name       = "比利時"
+    parent     = "europe"
+    url        = "/tags/比利時/"
+    weight     = 7
+
+[[navbar]]
+    identifier = "austria"
+    name       = "奧地利"
+    parent     = "europe"
+    url        = "/tags/奧地利/"
+    weight     = 8
+
+[[navbar]]
+    identifier = "hungary"
+    name       = "匈牙利"
+    parent     = "europe"
+    url        = "/tags/匈牙利/"
+    weight     = 9
+
+[[navbar]]
+    identifier = "poland"
+    name       = "波蘭"
+    parent     = "europe"
+    url        = "/tags/波蘭/"
+    weight     = 10
+
+[[navbar]]
+    identifier = "slovakia"
+    name       = "斯洛伐克"
+    parent     = "europe"
+    url        = "/tags/斯洛伐克/"
+    weight     = 11
+
+[[navbar]]
+    identifier = "sweden"
+    name       = "瑞典"
+    parent     = "europe"
+    url        = "/tags/瑞典/"
+    weight     = 12
+
+[[navbar]]
+    identifier = "norway"
+    name       = "挪威"
+    parent     = "europe"
+    url        = "/tags/挪威/"
+    weight     = 13
+
+[[navbar]]
+    identifier = "finland"
+    name       = "芬蘭"
+    parent     = "europe"
+    url        = "/tags/芬蘭/"
+    weight     = 14
+
+[[navbar]]
     identifier = "asia"
     name       = "亞洲"
     weight     = 3
@@ -63,6 +140,41 @@
     parent     = "asia"
     url        = "/tags/韓國/"
     weight     = 2
+
+[[navbar]]
+    identifier = "vietnam"
+    name       = "越南"
+    parent     = "asia"
+    url        = "/tags/越南/"
+    weight     = 3
+
+[[navbar]]
+    identifier = "thailand"
+    name       = "泰國"
+    parent     = "asia"
+    url        = "/tags/泰國/"
+    weight     = 4
+
+[[navbar]]
+    identifier = "singapore"
+    name       = "新加坡"
+    parent     = "asia"
+    url        = "/tags/新加坡/"
+    weight     = 5
+
+[[navbar]]
+    identifier = "indonesia"
+    name       = "印尼"
+    parent     = "asia"
+    url        = "/tags/印尼/"
+    weight     = 6
+
+[[navbar]]
+    identifier = "macau"
+    name       = "澳門"
+    parent     = "asia"
+    url        = "/tags/澳門/"
+    weight     = 7
 
 [[navbar]]
     identifier = "oceania"
