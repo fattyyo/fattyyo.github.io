@@ -25,8 +25,8 @@ tags:
   交換：法國 ESME Sudria（巴黎）一學期
 
 語言成績
-  TOEFL: [待補充]
-  GRE:   [待補充]（MCS optional，建議仍附上）
+  TOEFL: 102（R28 / L30 / S23 / W21）
+  GRE:   323（Q170 / V153）
 
 工作經驗
   Network Engineer Intern @ Zyxel Networks（2025–2026）
@@ -111,14 +111,16 @@ CV 和 SOP 互補，SOP 說故事、CV 列數字。
 
 ## TOEFL / GRE 備考建議
 
-**TOEFL**：
-- UIUC MCS 建議 103 以上（79–102 需修英文課才能畢業）
-- 口說最難突破，建議多錄音自我練習
-- 考場建議選線下，設備比較穩定
+**TOEFL（個人成績：102，R28 / L30 / S23 / W21）**：
+- UIUC MCS 建議 103 以上，79–102 入學後需修英文課才能畢業
+- 我最終 102，差一分，入學後需補修英文課，算是小遺憾
+- 口說（S）最難突破，建議多用 AI 工具模擬練習、錄音回聽
+- Listening 相對好拿，多刷題、熟悉題型即可
 
-**GRE**（MCS 為 optional）：
-- 雖然 optional，附上一個不差的成績仍有加分效果
-- Q 部分台灣學生幾乎都能拿 165+，重點是 V 和 AWA 不要太低
+**GRE（個人成績：323，Q170 / V153）**：
+- MCS 為 optional，但附上有加分效果，建議考
+- Q 滿分 170 對理工背景同學幾乎是標配，V 盡量拉到 155+
+- 我的 V153 算是偏低，建議多背字彙、刷 Verbal 題型
 
 ---
 
@@ -135,14 +137,29 @@ CV 和 SOP 互補，SOP 說故事、CV 列數字。
 
 ## 申請結果
 
-```
-錄取
-  UIUC MCS ✅（2026 Fall）
-  [其他結果待補充]
+共申請 12 所，最終選擇 UIUC MCS。
 
-拒絕
-  [待補充]
+**錄取 Admission**
 ```
+UIUC MCS       ✅  → 最終選擇
+UIUC MSIM      ✅
+UMich MSI      ✅
+USC CS28       ✅
+UTDallas MSITM ✅
+TAMU MSMIS     ✅  （附 $20,000 獎學金）
+```
+
+**拒絕 Rejection**
+```
+UT Austin MSIS ❌
+CMU MISM       ❌
+Rice MCS       ❌
+UCI MCS        ❌
+TAMU MCS       ❌
+UCSD CS75      ❌
+```
+
+最後在 UIUC MCS 和 TAMU MSMIS（有獎學金）之間猶豫了一段時間，但考量到 UIUC 的 CS 品牌、校友資源和未來找工的優勢，最終選擇放棄獎學金，選 UIUC。
 
 ---
 
