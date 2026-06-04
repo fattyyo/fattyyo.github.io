@@ -1,0 +1,13 @@
+baseURL                = "https://fattyyo.github.io/"
+theme                  = "stack"
+locale                 = "zh-tw"
+title                  = "Eric's Travel Blog"
+defaultContentLanguage = "en"
+hasCJKLanguage         = true
+
+[pagination]
+    pagerSize = 6
+
+[permalinks]
+    post = "/p/:slug/"
+    page = "/:slug/"

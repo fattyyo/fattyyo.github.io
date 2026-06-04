@@ -1,0 +1,7 @@
+[en]
+    label  = "English"
+    title  = "Eric's Travel Blog"
+    weight = 1
+
+    [en.params.sidebar]
+        subtitle = "旅遊攻略 × 旅行心得"
