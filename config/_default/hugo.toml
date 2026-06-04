@@ -1,7 +1,7 @@
 baseURL                = "https://fattyyo.github.io/"
 theme                  = "stack"
 locale                 = "zh-tw"
-title                  = "Eric's Travel Blog"
+title                  = "Eric 的海外日記"
 defaultContentLanguage = "en"
 hasCJKLanguage         = true
 

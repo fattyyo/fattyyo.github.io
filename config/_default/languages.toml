@@ -1,7 +1,7 @@
 [en]
     label  = "English"
-    title  = "Eric's Travel Blog"
+    title  = "Eric 的海外日記"
     weight = 1
 
     [en.params.sidebar]
-        subtitle = "旅遊攻略 × 旅行心得"
+        subtitle = "旅遊攻略 × 交換留學 × 海外生活"

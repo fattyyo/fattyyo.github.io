@@ -202,6 +202,32 @@
     weight     = 2
 
 [[navbar]]
+    identifier = "studyabroad"
+    name       = "留學交流"
+    weight     = 5
+
+[[navbar]]
+    identifier = "exchange"
+    name       = "交換心得"
+    parent     = "studyabroad"
+    url        = "/tags/交換心得/"
+    weight     = 1
+
+[[navbar]]
+    identifier = "preparation"
+    name       = "出發前準備"
+    parent     = "studyabroad"
+    url        = "/tags/出發前準備/"
+    weight     = 2
+
+[[navbar]]
+    identifier = "uiuc"
+    name       = "UIUC 留學"
+    parent     = "studyabroad"
+    url        = "/tags/UIUC留學/"
+    weight     = 3
+
+[[navbar]]
     identifier = "about"
     name       = "關於我"
     url        = "/about/"
