@@ -98,6 +98,11 @@
     color: #1a3a5c;
 }
 
+/* 關於我推到右側 */
+.top-navbar__item--about {
+    margin-left: auto;
+}
+
 /* Dark mode */
 [data-scheme="dark"] .top-navbar {
     background: #0f2440;

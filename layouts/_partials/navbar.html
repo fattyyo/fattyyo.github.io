@@ -4,7 +4,7 @@
         <ul class="top-navbar__menu">
             {{ range .Site.Menus.navbar }}
                 {{ if not .Parent }}
-                <li class="top-navbar__item {{ if .HasChildren }}has-dropdown{{ end }}">
+                <li class="top-navbar__item top-navbar__item--{{ .Identifier }} {{ if .HasChildren }}has-dropdown{{ end }}">
                     <a href="{{ if .URL }}{{ .URL }}{{ else }}#{{ end }}">{{ .Name }}</a>
                     {{ if .HasChildren }}
                     <ul class="top-navbar__dropdown">

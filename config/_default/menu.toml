@@ -200,3 +200,9 @@
     parent     = "oceania"
     url        = "/tags/紐西蘭/"
     weight     = 2
+
+[[navbar]]
+    identifier = "about"
+    name       = "關於我"
+    url        = "/about/"
+    weight     = 999
