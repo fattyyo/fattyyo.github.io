@@ -3,7 +3,7 @@ title: "About Eric"
 layout: "page"
 ---
 
-嗨，我是 Eric（王誠佑）。
+嗨，我是 Eric。
 
 目前就讀於 UIUC MCS（Master of Computer Science），大學畢業於元智大學資訊工程學系，也曾到法國交換留學半年。
 
