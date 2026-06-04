@@ -38,7 +38,7 @@ tags:
 
 | 職位 | 公司 | 期間 |
 |------|------|------|
-| Network Engineer Intern | Zyxel Networks | 2025–2026 |
+| Network Engineer Intern | Zyxel Networks | 2023–2024 |
 
 主要負責：GRE/RvR 測試自動化、網路拓樸建置、多執行緒效能優化
 
