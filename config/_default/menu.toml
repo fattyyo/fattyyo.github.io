@@ -8,6 +8,12 @@
 
 # Navbar 選單
 [[navbar]]
+    identifier = "home"
+    name       = "首頁"
+    url        = "/"
+    weight     = 0
+
+[[navbar]]
     identifier = "americas"
     name       = "美洲"
     weight     = 1

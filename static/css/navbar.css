@@ -2,7 +2,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #D95470;
+    background: #1a3a5c;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
@@ -77,7 +77,7 @@
     list-style: none;
     padding: 6px 0;
     margin: 0;
-    border-top: 3px solid #D95470;
+    border-top: 3px solid #1a3a5c;
 }
 
 .has-dropdown:hover .top-navbar__dropdown {
@@ -94,11 +94,11 @@
 }
 
 .top-navbar__dropdown li a:hover {
-    background: #fdf0f2;
-    color: #D95470;
+    background: #eef3fa;
+    color: #1a3a5c;
 }
 
 /* Dark mode */
 [data-scheme="dark"] .top-navbar {
-    background: #b8394f;
+    background: #0f2440;
 }
