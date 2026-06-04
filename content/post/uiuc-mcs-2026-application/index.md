@@ -64,17 +64,12 @@ tags:
 
 ## 選校策略
 
-申請前我把 program 分成三類：
+選校主要參考兩個資料來源：
 
-| 類型 | 代表學校 |
-|------|---------|
-| 就業導向 | UCI MCS、Rice MCS、USC CS28 |
-| 修課型 | **UIUC MCS**、Gatech MSCS、UMich MSCSE |
-| 研究型 | UT Austin MSCS、UCLA MSCS |
+1. **[一畝三分地](https://www.1point3acres.com/bbs/forum-82-1.html)**：上面有大量申請者自填的錄取三圍（GPA、TOEFL、GRE），可以直接查跟自己背景相近的人投了哪些學校、上了哪些，是判斷自己落點最直接的方式
+2. **[Open CS Application](https://opencs.app/grade/)**：整理了各校的錄取偏好與代表性錄取案例，適合快速了解每個 program 的特性和申請難度梯度
 
-因為目標是進入業界做 Software Engineer 或 ML Engineer，所以重點放在**修課型**，希望能修到扎實多元的 CS 課程，同時保有實習與就業的彈性。
-
-選校梯度參考了中國申請者整理的 [Open CS Application](https://opencs.app/grade/) 資料庫，裡面有各校的錄取偏好、代表性錄取案例和申請季即時資訊，建議申請前務必查閱。
+兩個搭配使用，在確定選校名單前先查清楚，避免衝太高或保守過頭。
 
 ### 為什麼選 UIUC MCS？
 
