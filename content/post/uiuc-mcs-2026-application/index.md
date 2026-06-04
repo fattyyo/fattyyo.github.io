@@ -75,6 +75,8 @@ tags:
 
 因為目標是進入業界做 Software Engineer 或 ML Engineer，所以重點放在**修課型**，希望能修到扎實多元的 CS 課程，同時保有實習與就業的彈性。
 
+選校梯度參考了中國申請者整理的 [Open CS Application](https://opencs.app/grade/) 資料庫，裡面有各校的錄取偏好、代表性錄取案例和申請季即時資訊，建議申請前務必查閱。
+
 ### 為什麼選 UIUC MCS？
 
 - CS 四大名校之一，校友網路強大
@@ -184,4 +186,5 @@ Zyxel 的實習給了我一個很好的「業界視角」，讓我在申請工�
 - PTT StudyAbroad 版
 - Dcard 留學版
 - 一畝三分地（中文討論資源最完整）
-- [選校難易度對照表](https://docs.google.com/spreadsheets/d/1mPXwY1uvP2fipK9ySOkPa13QsMX3FAOdM-HR8CbnmUY/)
+- [Open CS Application 選校梯度表](https://opencs.app/grade/)（各校錄取偏好、代表性案例，非常實用）
+- [選校難易度對照表（Google Sheet）](https://docs.google.com/spreadsheets/d/1mPXwY1uvP2fipK9ySOkPa13QsMX3FAOdM-HR8CbnmUY/)
