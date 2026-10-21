@@ -43,7 +43,7 @@
   <header class="section-head">
     <p class="kicker mono">Archive</p>
     <h2 id="latest-title" class="section-title">更多 <em>旅程</em></h2>
-    <a class="section-more" href="{{ "/post/" | relURL }}">全部文章 →</a>
+    <a class="section-more" href="{{ "post/" | relURL }}">全部文章 →</a>
   </header>
   <div class="grid">
     {{- range first 6 . }}{{ partial "card.html" (dict "page" . "size" "md") }}{{ end }}
@@ -56,6 +56,6 @@
 <section class="about-strip">
   <p class="kicker mono">About</p>
   <p class="about-strip-text">嗨，我是 Eric。在巴黎交換過半年，現在在美國念書。這裡記錄我真的走過、真的踩過雷的地方。</p>
-  <a class="btn" href="{{ "/about/" | relURL }}">更多關於我 →</a>
+  <a class="btn" href="{{ "about/" | relURL }}">更多關於我 →</a>
 </section>
 {{ end }}

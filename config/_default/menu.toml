@@ -10,7 +10,7 @@
 [[navbar]]
     identifier = "home"
     name       = "首頁"
-    url        = "/"
+    pageRef    = "/"
     weight     = -1
 
 [[navbar]]
@@ -22,7 +22,7 @@
     identifier = "usa"
     name       = "美國"
     parent     = "americas"
-    url        = "/tags/美國/"
+    url        = "tags/美國/"
     weight     = 1
 
 [[navbar]]
@@ -34,98 +34,98 @@
     identifier = "france"
     name       = "法國"
     parent     = "europe"
-    url        = "/tags/法國/"
+    url        = "tags/法國/"
     weight     = 1
 
 [[navbar]]
     identifier = "uk"
     name       = "英國"
     parent     = "europe"
-    url        = "/tags/英國/"
+    url        = "tags/英國/"
     weight     = 2
 
 [[navbar]]
     identifier = "iceland"
     name       = "冰島"
     parent     = "europe"
-    url        = "/tags/冰島/"
+    url        = "tags/冰島/"
     weight     = 3
 
 [[navbar]]
     identifier = "italy"
     name       = "義大利"
     parent     = "europe"
-    url        = "/tags/義大利/"
+    url        = "tags/義大利/"
     weight     = 4
 
 [[navbar]]
     identifier = "spain"
     name       = "西班牙"
     parent     = "europe"
-    url        = "/tags/西班牙/"
+    url        = "tags/西班牙/"
     weight     = 5
 
 [[navbar]]
     identifier = "netherlands"
     name       = "荷蘭"
     parent     = "europe"
-    url        = "/tags/荷蘭/"
+    url        = "tags/荷蘭/"
     weight     = 6
 
 [[navbar]]
     identifier = "belgium"
     name       = "比利時"
     parent     = "europe"
-    url        = "/tags/比利時/"
+    url        = "tags/比利時/"
     weight     = 7
 
 [[navbar]]
     identifier = "austria"
     name       = "奧地利"
     parent     = "europe"
-    url        = "/tags/奧地利/"
+    url        = "tags/奧地利/"
     weight     = 8
 
 [[navbar]]
     identifier = "hungary"
     name       = "匈牙利"
     parent     = "europe"
-    url        = "/tags/匈牙利/"
+    url        = "tags/匈牙利/"
     weight     = 9
 
 [[navbar]]
     identifier = "poland"
     name       = "波蘭"
     parent     = "europe"
-    url        = "/tags/波蘭/"
+    url        = "tags/波蘭/"
     weight     = 10
 
 [[navbar]]
     identifier = "slovakia"
     name       = "斯洛伐克"
     parent     = "europe"
-    url        = "/tags/斯洛伐克/"
+    url        = "tags/斯洛伐克/"
     weight     = 11
 
 [[navbar]]
     identifier = "sweden"
     name       = "瑞典"
     parent     = "europe"
-    url        = "/tags/瑞典/"
+    url        = "tags/瑞典/"
     weight     = 12
 
 [[navbar]]
     identifier = "norway"
     name       = "挪威"
     parent     = "europe"
-    url        = "/tags/挪威/"
+    url        = "tags/挪威/"
     weight     = 13
 
 [[navbar]]
     identifier = "finland"
     name       = "芬蘭"
     parent     = "europe"
-    url        = "/tags/芬蘭/"
+    url        = "tags/芬蘭/"
     weight     = 14
 
 [[navbar]]
@@ -137,49 +137,49 @@
     identifier = "japan"
     name       = "日本"
     parent     = "asia"
-    url        = "/tags/日本/"
+    url        = "tags/日本/"
     weight     = 1
 
 [[navbar]]
     identifier = "korea"
     name       = "韓國"
     parent     = "asia"
-    url        = "/tags/韓國/"
+    url        = "tags/韓國/"
     weight     = 2
 
 [[navbar]]
     identifier = "vietnam"
     name       = "越南"
     parent     = "asia"
-    url        = "/tags/越南/"
+    url        = "tags/越南/"
     weight     = 3
 
 [[navbar]]
     identifier = "thailand"
     name       = "泰國"
     parent     = "asia"
-    url        = "/tags/泰國/"
+    url        = "tags/泰國/"
     weight     = 4
 
 [[navbar]]
     identifier = "singapore"
     name       = "新加坡"
     parent     = "asia"
-    url        = "/tags/新加坡/"
+    url        = "tags/新加坡/"
     weight     = 5
 
 [[navbar]]
     identifier = "indonesia"
     name       = "印尼"
     parent     = "asia"
-    url        = "/tags/印尼/"
+    url        = "tags/印尼/"
     weight     = 6
 
 [[navbar]]
     identifier = "macau"
     name       = "澳門"
     parent     = "asia"
-    url        = "/tags/澳門/"
+    url        = "tags/澳門/"
     weight     = 7
 
 [[navbar]]
@@ -191,14 +191,14 @@
     identifier = "australia"
     name       = "澳洲"
     parent     = "oceania"
-    url        = "/tags/澳洲/"
+    url        = "tags/澳洲/"
     weight     = 1
 
 [[navbar]]
     identifier = "newzealand"
     name       = "紐西蘭"
     parent     = "oceania"
-    url        = "/tags/紐西蘭/"
+    url        = "tags/紐西蘭/"
     weight     = 2
 
 [[navbar]]
@@ -210,25 +210,25 @@
     identifier = "exchange"
     name       = "交換心得"
     parent     = "studyabroad"
-    url        = "/tags/交換心得/"
+    url        = "tags/交換心得/"
     weight     = 1
 
 [[navbar]]
     identifier = "preparation"
     name       = "出發前準備"
     parent     = "studyabroad"
-    url        = "/tags/出發前準備/"
+    url        = "tags/出發前準備/"
     weight     = 2
 
 [[navbar]]
     identifier = "uiuc"
     name       = "UIUC 留學"
     parent     = "studyabroad"
-    url        = "/tags/UIUC留學/"
+    url        = "tags/UIUC留學/"
     weight     = 3
 
 [[navbar]]
     identifier = "about"
     name       = "關於我"
-    url        = "/about/"
+    pageRef    = "/about"
     weight     = 999

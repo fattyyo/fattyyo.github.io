@@ -1,8 +1,12 @@
 name: Deploy to GitHub Pages
 
+# 網站結構：fattyyo.com/ = 作品集（fattyyo/portfolio repo），fattyyo.com/blog/ = 這個 Hugo 部落格
 on:
   push:
     branches: [main]
+  workflow_dispatch:          # 作品集更新後手動觸發：gh workflow run deploy.yml -R fattyyo/fattyyo.github.io
+  schedule:
+    - cron: "0 9 * * *"       # 每天一次，保險起見把作品集的最新版帶上來
 
 permissions:
   contents: read
@@ -18,8 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Checkout portfolio
+        uses: actions/checkout@v4
         with:
-          submodules: recursive
+          repository: fattyyo/portfolio
+          path: _portfolio
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -27,8 +35,11 @@ jobs:
           hugo-version: "latest"
           extended: true
 
-      - name: Build
-        run: hugo --minify
+      - name: Build blog
+        run: hugo --minify -d public/blog
+
+      - name: Add portfolio and root 404
+        run: python3 .github/scripts/assemble.py _portfolio public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

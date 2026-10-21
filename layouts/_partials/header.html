@@ -1,7 +1,7 @@
 {{- /* 頁首：導覽列直接讀 menu.toml 的 navbar。有文章的國家才是連結 */ -}}
 {{- $page := . }}
 <header class="masthead">
-  <a class="logo" href="{{ "/" | relURL }}" aria-label="{{ site.Title }} 首頁">
+  <a class="logo" href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Title }} 首頁">
     <span class="logo-mark" aria-hidden="true">
       <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12.5"/><path d="M8.5 18.2 24 12.6l-6.4 9.6-2.2-4.4z"/></svg>
     </span>
@@ -19,7 +19,7 @@
               <summary>{{ .Name }}<span class="chev" aria-hidden="true"></span></summary>
               <ul class="submenu">
                 {{- range .Children }}
-                  {{- $tag := replaceRE "^/tags/(.+)/$" "$1" (urls.Parse .URL).Path }}
+                  {{- $tag := replaceRE "^.*tags/(.+)/$" "$1" (urls.Parse .URL).Path }}
                   {{- $term := site.GetPage (printf "/tags/%s" $tag) }}
                   {{- $count := 0 }}{{ with $term }}{{ $count = len .Pages }}{{ end }}
                   {{- if and $term (gt $count 0) }}

@@ -19,7 +19,7 @@
   <ol class="stamps">
     {{- range $i, $s := $stamps }}
       {{- $c := index hugo.Data.countries $s.name | default (dict "en" $s.name "iso" "") }}
-      {{- $tag := replaceRE "^/tags/(.+)/$" "$1" (urls.Parse $s.url).Path }}
+      {{- $tag := replaceRE "^.*tags/(.+)/$" "$1" (urls.Parse $s.url).Path }}
       {{- $term := site.GetPage (printf "/tags/%s" $tag) }}
       {{- $count := 0 }}{{ with $term }}{{ $count = len .Pages }}{{ end }}
       {{- $rot := sub (mod (mul (add $i 3) 37) 15) 7 }}
