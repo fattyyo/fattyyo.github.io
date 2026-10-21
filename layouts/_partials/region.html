@@ -1,0 +1,4 @@
+{{- /* 文章的第一個分類 → 地區（名稱與配色） */ -}}
+{{- $cat := index (.Params.categories | default (slice "留學交流")) 0 }}
+{{- $r := index hugo.Data.regions $cat | default (dict "en" "Notes" "color" "#3a352c") }}
+{{- return (merge $r (dict "name" $cat)) }}

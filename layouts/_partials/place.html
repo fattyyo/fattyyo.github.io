@@ -1,0 +1,9 @@
+{{- /* 從標籤找出最具代表性的地點（rank 最小）；找不到回傳 nil */ -}}
+{{- $best := dict }}
+{{- $bestRank := 99 }}
+{{- range .Params.tags }}
+  {{- with index hugo.Data.places . }}
+    {{- if lt .rank $bestRank }}{{ $best = . }}{{ $bestRank = .rank }}{{ end }}
+  {{- end }}
+{{- end }}
+{{- return (cond (gt (len $best) 0) $best nil) }}

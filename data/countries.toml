@@ -1,0 +1,73 @@
+# 導覽列國家（menu.toml）的英文名與 ISO 代碼，給「護照足跡」印章用
+["美國"]
+en = "United States"
+iso = "USA"
+["法國"]
+en = "France"
+iso = "FRA"
+["英國"]
+en = "United Kingdom"
+iso = "GBR"
+["冰島"]
+en = "Iceland"
+iso = "ISL"
+["義大利"]
+en = "Italy"
+iso = "ITA"
+["西班牙"]
+en = "Spain"
+iso = "ESP"
+["荷蘭"]
+en = "Netherlands"
+iso = "NLD"
+["比利時"]
+en = "Belgium"
+iso = "BEL"
+["奧地利"]
+en = "Austria"
+iso = "AUT"
+["匈牙利"]
+en = "Hungary"
+iso = "HUN"
+["波蘭"]
+en = "Poland"
+iso = "POL"
+["斯洛伐克"]
+en = "Slovakia"
+iso = "SVK"
+["瑞典"]
+en = "Sweden"
+iso = "SWE"
+["挪威"]
+en = "Norway"
+iso = "NOR"
+["芬蘭"]
+en = "Finland"
+iso = "FIN"
+["日本"]
+en = "Japan"
+iso = "JPN"
+["韓國"]
+en = "South Korea"
+iso = "KOR"
+["越南"]
+en = "Vietnam"
+iso = "VNM"
+["泰國"]
+en = "Thailand"
+iso = "THA"
+["新加坡"]
+en = "Singapore"
+iso = "SGP"
+["印尼"]
+en = "Indonesia"
+iso = "IDN"
+["澳門"]
+en = "Macau"
+iso = "MAC"
+["澳洲"]
+en = "Australia"
+iso = "AUS"
+["紐西蘭"]
+en = "New Zealand"
+iso = "NZL"

@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{- $isPost := eq .Section "post" }}
+<article class="article{{ if not $isPost }} is-page{{ end }}">
+  <header class="article-head">
+    {{- if $isPost }}
+    {{- $r := partial "region.html" . }}
+    <p class="kicker mono"><span class="dot" style="--region: {{ $r.color | safeCSS }}"></span>{{ $r.name }} · {{ $r.en }}</p>
+    {{- else }}
+    <p class="kicker mono">{{ .Params.kicker | default "Page" }}</p>
+    {{- end }}
+    <h1 class="article-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="article-dek">{{ . }}</p>{{ end }}
+    {{- if $isPost }}
+    <p class="article-meta mono">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+      <span>{{ .ReadingTime }} 分鐘閱讀</span>
+      {{ with .Params.tags }}<span class="article-tags">{{ range . }}{{ with site.GetPage (printf "/tags/%s" .) }}<a href="{{ .RelPermalink }}">#{{ .Title }}</a>{{ end }}{{ end }}</span>{{ end }}
+    </p>
+    {{- end }}
+  </header>
+
+  {{- if $isPost }}
+  <div class="article-cover">{{ partial "cover.html" (dict "page" . "size" "lg") }}</div>
+  {{- end }}
+
+  <div class="article-layout{{ if and $isPost (gt (len .TableOfContents) 80) }} has-toc{{ end }}">
+    {{- if and $isPost (gt (len .TableOfContents) 80) }}
+    <aside class="toc" aria-label="目錄">
+      <p class="toc-title mono">目錄</p>
+      {{ .TableOfContents }}
+    </aside>
+    {{- end }}
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </div>
+
+  {{- if $isPost }}
+  <nav class="article-nav" aria-label="上一篇與下一篇">
+    {{ with .NextInSection }}<a class="an-prev" href="{{ .RelPermalink }}"><span class="mono">← 較新</span><strong>{{ .Title }}</strong></a>{{ else }}<span></span>{{ end }}
+    {{ with .PrevInSection }}<a class="an-next" href="{{ .RelPermalink }}"><span class="mono">較早 →</span><strong>{{ .Title }}</strong></a>{{ end }}
+  </nav>
+  {{- $related := first 3 (site.RegularPages.Related .) }}
+  {{- with $related }}
+  <section class="related" aria-labelledby="related-title">
+    <header class="section-head"><p class="kicker mono">Next stop</p><h2 id="related-title" class="section-title">也許你也想看</h2></header>
+    <div class="grid">{{ range . }}{{ partial "card.html" (dict "page" . "size" "md") }}{{ end }}</div>
+  </section>
+  {{- end }}
+  {{- end }}
+</article>
+<div class="progress" aria-hidden="true"><i></i></div>
+{{ end }}

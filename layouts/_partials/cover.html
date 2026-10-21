@@ -1,0 +1,23 @@
+{{- /* 封面：有 image 就用照片，沒有就畫一張「行李吊牌」。參數：page、size（lg / md / sm） */ -}}
+{{- $p := .page }}{{ $size := .size | default "md" }}
+{{- $r := partial "region.html" $p }}
+{{- $place := partial "place.html" $p }}
+{{- $img := "" }}
+{{- with $p.Params.image }}{{ with $p.Resources.GetMatch . }}{{ $img = . }}{{ end }}{{ end }}
+<div class="cover cover-{{ $size }}{{ if $img }} has-photo{{ end }}" style="--region: {{ $r.color | safeCSS }}">
+  {{- if $img }}
+    {{- $w := cond (eq $size "lg") "1600x" "900x" }}
+    {{- $s := $img.Resize (printf "%s webp q78" $w) }}
+    <img src="{{ $s.RelPermalink }}" width="{{ $s.Width }}" height="{{ $s.Height }}" alt="" loading="{{ cond (eq $size "lg") "eager" "lazy" }}" decoding="async">
+  {{- end }}
+  <div class="tag-card" aria-hidden="true">
+    <span class="tc-top mono"><span>{{ $r.en }}</span><span>{{ $p.Date.Format "2006.01" }}</span></span>
+    <span class="tc-code">{{ with $place }}{{ .code }}{{ else }}{{ substr ($r.en | upper) 0 3 }}{{ end }}</span>
+    <span class="tc-bottom mono">
+      <span>{{ with $place }}{{ .en }}{{ else }}{{ $r.name }}{{ end }}</span>
+      <span>{{ with $place }}{{ partial "coord.html" . }}{{ end }}</span>
+    </span>
+    <span class="tc-stamp"><span>{{ $p.Date.Format "02 Jan 06" | upper }}</span></span>
+    <span class="tc-hole"></span>
+  </div>
+</div>

@@ -1,0 +1,3 @@
+{{- /* 48.857 → 48.86°N */ -}}
+{{- $lat := .lat }}{{ $lng := .lng -}}
+{{- printf "%.2f°%s %.2f°%s" (math.Abs $lat) (cond (ge $lat 0) "N" "S") (math.Abs $lng) (cond (ge $lng 0) "E" "W") -}}

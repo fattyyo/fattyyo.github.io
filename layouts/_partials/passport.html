@@ -1,0 +1,37 @@
+{{- /* 護照足跡：menu.toml 裡四個地區底下的國家，一國一個印章 */ -}}
+{{- $regions := dict "americas" "美洲" "europe" "歐洲" "asia" "亞洲" "oceania" "大洋洲" }}
+{{- $stamps := slice }}
+{{- range site.Menus.navbar }}
+  {{- $rname := index $regions .Identifier }}
+  {{- if $rname }}
+    {{- $r := index hugo.Data.regions $rname }}
+    {{- range .Children }}
+      {{- $stamps = $stamps | append (dict "name" .Name "url" .URL "region" $rname "color" $r.color) }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+<section class="passport" aria-labelledby="passport-title">
+  <header class="section-head">
+    <p class="kicker mono">Passport · 足跡</p>
+    <h2 id="passport-title" class="section-title">走過的 <em>{{ len $stamps }}</em> 個國家</h2>
+    <p class="section-dek">有文章的國家可以點進去；灰色的還在我的待寫清單上。</p>
+  </header>
+  <ol class="stamps">
+    {{- range $i, $s := $stamps }}
+      {{- $c := index hugo.Data.countries $s.name | default (dict "en" $s.name "iso" "") }}
+      {{- $tag := replaceRE "^/tags/(.+)/$" "$1" (urls.Parse $s.url).Path }}
+      {{- $term := site.GetPage (printf "/tags/%s" $tag) }}
+      {{- $count := 0 }}{{ with $term }}{{ $count = len .Pages }}{{ end }}
+      {{- $rot := sub (mod (mul (add $i 3) 37) 15) 7 }}
+      {{- $shape := index (slice "round" "rect" "oval" "rect") (mod $i 4) }}
+      <li class="stamp stamp-{{ $shape }}{{ if gt $count 0 }} has-posts{{ end }}" style="--rot: {{ $rot }}deg; --region: {{ $s.color | safeCSS }}">
+        {{- if gt $count 0 }}<a href="{{ $term.RelPermalink }}">{{ else }}<span>{{ end }}
+          <span class="st-iso mono">{{ $c.iso }}</span>
+          <span class="st-name">{{ $s.name }}</span>
+          <span class="st-en mono">{{ $c.en }}</span>
+          <span class="st-count mono">{{ if gt $count 0 }}{{ $count }} 篇{{ else }}待寫{{ end }}</span>
+        {{- if gt $count 0 }}</a>{{ else }}</span>{{ end }}
+      </li>
+    {{- end }}
+  </ol>
+</section>

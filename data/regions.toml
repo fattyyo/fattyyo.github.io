@@ -1,0 +1,16 @@
+# 分類 → 地區配色。封面底色就是這裡的 color
+["歐洲"]
+en = "Europe"
+color = "#2b4570"
+["亞洲"]
+en = "Asia"
+color = "#9e3d2b"
+["美洲"]
+en = "Americas"
+color = "#2e5944"
+["大洋洲"]
+en = "Oceania"
+color = "#1d6670"
+["留學交流"]
+en = "Study abroad"
+color = "#7f5d1f"

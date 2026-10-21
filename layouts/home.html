@@ -1,16 +1,61 @@
 {{ define "main" }}
-    {{- $paginator := partial "helper/paginator.html" . -}}
+{{- $posts := where site.RegularPages "Section" "in" site.Params.mainSections }}
+{{- $countries := 0 }}
+{{- range site.Menus.navbar }}{{ if in (slice "americas" "europe" "asia" "oceania") .Identifier }}{{ $countries = add $countries (len .Children) }}{{ end }}{{ end }}
 
-    <section class="article-list">
-        {{ range $index, $element := $paginator.Pages }}
-            {{ partial "article-list/default" . }}
-        {{ end }}
-    </section>
+<section class="hero">
+  <div class="pass reveal" style="--d:.45s" aria-hidden="true">
+    <div class="pass-main">
+      <p class="pass-label mono">Boarding pass · 登機證</p>
+      <p class="pass-route"><span>TPE</span><i></i><span>CDG</span><i></i><span>CMI</span></p>
+      <dl class="pass-grid mono">
+        <div><dt>Passenger</dt><dd>{{ upper site.Params.author }}</dd></div>
+        <div><dt>Since</dt><dd>2024</dd></div>
+        <div><dt>Countries</dt><dd>{{ $countries }}</dd></div>
+        <div><dt>Gate</dt><dd>∞</dd></div>
+      </dl>
+    </div>
+    <div class="pass-stub mono"><span>TPE → CMI</span><span class="barcode"></span></div>
+  </div>
+  <p class="kicker mono reveal">Vol. {{ now.Year }} · {{ site.Params.taglineEn }}</p>
+  <h1 class="hero-title">
+    <span class="ht-line reveal" style="--d:.05s">海外</span><span class="ht-line reveal" style="--d:.15s">日記<em class="ht-en">field notes</em></span>
+  </h1>
+  <div class="hero-foot reveal" style="--d:.3s">
+    <p class="hero-dek">{{ site.Params.description }}。<br>把每一次出發，整理成下一個人用得上的攻略。</p>
+    <dl class="hero-stats">
+      <div><dt class="mono">文章</dt><dd>{{ len $posts }}</dd></div>
+      <div><dt class="mono">國家</dt><dd>{{ $countries }}</dd></div>
+      <div><dt class="mono">現在</dt><dd class="now">Champaign</dd></div>
+    </dl>
+  </div>
+</section>
 
-    {{- partial "pagination.html" . -}}
-    {{- partial "footer/footer" . -}}
-{{ end }}
+{{- with index $posts 0 }}
+<section class="featured" aria-label="最新文章">
+  <p class="kicker mono">最新一站</p>
+  {{ partial "card.html" (dict "page" . "size" "lg") }}
+</section>
+{{- end }}
 
-{{ define "right-sidebar" }}
-    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{- with after 1 $posts }}
+<section class="latest" aria-labelledby="latest-title">
+  <header class="section-head">
+    <p class="kicker mono">Archive</p>
+    <h2 id="latest-title" class="section-title">更多 <em>旅程</em></h2>
+    <a class="section-more" href="{{ "/post/" | relURL }}">全部文章 →</a>
+  </header>
+  <div class="grid">
+    {{- range first 6 . }}{{ partial "card.html" (dict "page" . "size" "md") }}{{ end }}
+  </div>
+</section>
+{{- end }}
+
+{{ partial "passport.html" . }}
+
+<section class="about-strip">
+  <p class="kicker mono">About</p>
+  <p class="about-strip-text">嗨，我是 Eric。在巴黎交換過半年，現在在美國念書。這裡記錄我真的走過、真的踩過雷的地方。</p>
+  <a class="btn" href="{{ "/about/" | relURL }}">更多關於我 →</a>
+</section>
 {{ end }}

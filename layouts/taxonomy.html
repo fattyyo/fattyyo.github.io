@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="list-head">
+  <p class="kicker mono">Index</p>
+  <h1 class="list-title">{{ if eq .Data.Plural "categories" }}分類{{ else }}標籤{{ end }}</h1>
+</section>
+<section class="terms">
+  <ul class="term-cloud">
+    {{- range .Data.Terms.ByCount }}
+    <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}<span class="mono">{{ .Count }}</span></a></li>
+    {{- end }}
+  </ul>
+</section>
+{{ end }}

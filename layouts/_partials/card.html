@@ -1,0 +1,14 @@
+{{- /* 文章卡。參數：page、size、index */ -}}
+{{- $p := .page }}
+{{- $r := partial "region.html" $p }}
+<article class="card card-{{ .size | default "md" }}">
+  <a class="card-link" href="{{ $p.RelPermalink }}">
+    {{ partial "cover.html" (dict "page" $p "size" (.size | default "md")) }}
+    <div class="card-body">
+      <p class="card-kicker mono"><span class="dot" style="--region: {{ $r.color | safeCSS }}"></span>{{ $r.name }}<span class="sep">·</span><time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "2006.01.02" }}</time></p>
+      <h3 class="card-title">{{ $p.Title }}</h3>
+      {{ with $p.Description }}<p class="card-dek">{{ . }}</p>{{ end }}
+      <p class="card-meta mono">{{ $p.ReadingTime }} 分鐘閱讀<span class="arrow" aria-hidden="true">→</span></p>
+    </div>
+  </a>
+</article>

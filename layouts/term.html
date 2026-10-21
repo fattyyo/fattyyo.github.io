@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{- $c := index hugo.Data.countries .Title }}
+{{- $place := index hugo.Data.places .Title }}
+<section class="list-head">
+  <p class="kicker mono">{{ if eq .Data.Plural "categories" }}Category{{ else }}Tag{{ end }}{{ with $c }} · {{ .en }}{{ else }}{{ with $place }} · {{ .en }}{{ end }}{{ end }}</p>
+  <h1 class="list-title">{{ .Title }}{{ with $c }}<em>{{ .iso }}</em>{{ else }}{{ with $place }}<em>{{ .code }}</em>{{ end }}{{ end }}</h1>
+  <p class="list-dek">{{ len .Pages }} 篇文章</p>
+</section>
+<section class="latest">
+  <div class="grid">{{ range .Pages }}{{ partial "card.html" (dict "page" . "size" "md") }}{{ end }}</div>
+</section>
+{{ end }}

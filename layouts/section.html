@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="list-head">
+  <p class="kicker mono">Archive · 全部文章</p>
+  <h1 class="list-title">所有<em>旅程</em></h1>
+  <p class="list-dek">共 {{ len .RegularPages }} 篇，依時間排序。</p>
+</section>
+<section class="archive">
+  {{- range .RegularPages.GroupByDate "2006" }}
+  <div class="archive-year">
+    <h2 class="archive-y">{{ .Key }}</h2>
+    <ol class="archive-list">
+      {{- range .Pages }}
+      {{- $r := partial "region.html" . }}
+      <li><a href="{{ .RelPermalink }}">
+        <time class="mono" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "01.02" }}</time>
+        <span class="al-title">{{ .Title }}</span>
+        <span class="al-region mono"><span class="dot" style="--region: {{ $r.color | safeCSS }}"></span>{{ $r.name }}</span>
+      </a></li>
+      {{- end }}
+    </ol>
+  </div>
+  {{- end }}
+</section>
+{{ end }}

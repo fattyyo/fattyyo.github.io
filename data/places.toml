@@ -1,0 +1,56 @@
+# 標籤 → 封面上的地點代碼。rank 越小越優先（城市 > 國家 > 主題）
+# code 用 IATA 城市／機場代碼，lat / lng 印在封面上
+["巴黎"]
+code = "PAR"
+en = "Paris"
+lat = 48.857
+lng = 2.352
+rank = 1
+["東京"]
+code = "TYO"
+en = "Tokyo"
+lat = 35.676
+lng = 139.650
+rank = 1
+["ESME"]
+code = "PAR"
+en = "Paris"
+lat = 48.814
+lng = 2.391
+rank = 1
+["UIUC留學"]
+code = "CMI"
+en = "Champaign"
+lat = 40.110
+lng = -88.228
+rank = 1
+["MCS"]
+code = "CMI"
+en = "Champaign"
+lat = 40.110
+lng = -88.228
+rank = 2
+["交換心得"]
+code = "PAR"
+en = "Paris"
+lat = 48.857
+lng = 2.352
+rank = 3
+["法國"]
+code = "FRA"
+en = "France"
+lat = 46.603
+lng = 1.888
+rank = 2
+["日本"]
+code = "JPN"
+en = "Japan"
+lat = 36.204
+lng = 138.253
+rank = 2
+["美國留學"]
+code = "USA"
+en = "United States"
+lat = 39.828
+lng = -98.579
+rank = 3
